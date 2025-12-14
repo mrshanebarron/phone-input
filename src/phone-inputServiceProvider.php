@@ -11,14 +11,14 @@ class phone-inputServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/ld-phone-input.php', 'ld-phone-input');
+        $this->mergeConfigFrom(__DIR__ . '/../config/sb-phone-input.php', 'sb-phone-input');
     }
 
     public function boot(): void
     {
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'ld-phone-input');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'sb-phone-input');
 
-        Livewire::component('ld-phone-input', phone-input::class);
+        Livewire::component('sb-phone-input', phone-input::class);
 
         $this->loadViewComponentsAs('ld', [
             Bladephone-input::class,
@@ -26,12 +26,12 @@ class phone-inputServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../config/ld-phone-input.php' => config_path('ld-phone-input.php'),
-            ], 'ld-phone-input-config');
+                __DIR__ . '/../config/sb-phone-input.php' => config_path('sb-phone-input.php'),
+            ], 'sb-phone-input-config');
 
             $this->publishes([
-                __DIR__ . '/../resources/views' => resource_path('views/vendor/ld-phone-input'),
-            ], 'ld-phone-input-views');
+                __DIR__ . '/../resources/views' => resource_path('views/vendor/sb-phone-input'),
+            ], 'sb-phone-input-views');
         }
     }
 }

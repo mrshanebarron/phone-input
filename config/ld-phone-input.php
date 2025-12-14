@@ -1,5 +1,5 @@
 <?php
 
 return [
-    // Default settings for ld-phone-input
+    // Default settings for sb-phone-input
 ];

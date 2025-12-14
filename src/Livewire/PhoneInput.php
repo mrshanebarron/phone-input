@@ -46,6 +46,6 @@ class PhoneInput extends Component
 
     public function render()
     {
-        return view('ld-phone-input::livewire.phone-input');
+        return view('sb-phone-input::livewire.phone-input');
     }
 }

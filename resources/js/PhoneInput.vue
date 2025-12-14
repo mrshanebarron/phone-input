@@ -44,7 +44,7 @@
 import { ref, computed, watch } from 'vue';
 
 export default {
-  name: 'LdPhoneInput',
+  name: 'SbPhoneInput',
   props: {
     modelValue: { type: String, default: '' },
     defaultCountry: { type: String, default: 'US' },

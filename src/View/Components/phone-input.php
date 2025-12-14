@@ -13,6 +13,6 @@ class phone-input extends Component
 
     public function render()
     {
-        return view('ld-phone-input::components.phone-input');
+        return view('sb-phone-input::components.phone-input');
     }
 }
