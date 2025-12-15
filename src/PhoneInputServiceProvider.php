@@ -1,13 +1,13 @@
 <?php
 
-namespace MrShaneBarron\phone-input;
+namespace MrShaneBarron\PhoneInput;
 
 use Illuminate\Support\ServiceProvider;
-use MrShaneBarron\phone-input\Livewire\phone-input;
-use MrShaneBarron\phone-input\View\Components\phone-input as Bladephone-input;
+use MrShaneBarron\PhoneInput\Livewire\PhoneInput;
+use MrShaneBarron\PhoneInput\View\Components\phone-input as BladePhoneInput;
 use Livewire\Livewire;
 
-class phone-inputServiceProvider extends ServiceProvider
+class PhoneInputServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
@@ -21,7 +21,7 @@ class phone-inputServiceProvider extends ServiceProvider
         Livewire::component('sb-phone-input', phone-input::class);
 
         $this->loadViewComponentsAs('ld', [
-            Bladephone-input::class,
+            BladePhoneInput::class,
         ]);
 
         if ($this->app->runningInConsole()) {
