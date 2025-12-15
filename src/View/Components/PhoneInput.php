@@ -1,10 +1,10 @@
 <?php
 
-namespace MrShaneBarron\phone-input\View\Components;
+namespace MrShaneBarron\PhoneInput\View\Components;
 
 use Illuminate\View\Component;
 
-class phone-input extends Component
+class PhoneInput extends Component
 {
     public function __construct()
     {

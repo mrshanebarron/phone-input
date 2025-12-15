@@ -4,8 +4,7 @@ namespace MrShaneBarron\PhoneInput;
 
 use Illuminate\Support\ServiceProvider;
 use MrShaneBarron\PhoneInput\Livewire\PhoneInput;
-use MrShaneBarron\PhoneInput\View\Components\phone-input as BladePhoneInput;
-use Livewire\Livewire;
+use MrShaneBarron\PhoneInput\View\Components\PhoneInput as BladePhoneInput;
 
 class PhoneInputServiceProvider extends ServiceProvider
 {
@@ -18,7 +17,9 @@ class PhoneInputServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'sb-phone-input');
 
-        Livewire::component('sb-phone-input', phone-input::class);
+        if (class_exists(\Livewire\Livewire::class)) {
+            \Livewire\Livewire::component('sb-phone-input', PhoneInput::class);
+        }
 
         $this->loadViewComponentsAs('ld', [
             BladePhoneInput::class,
